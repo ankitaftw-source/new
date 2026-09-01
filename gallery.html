@@ -27,6 +27,15 @@
                 background-color: #ffe066;
                 color: black;
             }
+            .footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #ddd;
+    text-align: center;
+}
         </style>
     </head>
     <body>
@@ -36,5 +45,60 @@
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact_Us</a>
        </div> 
+           <section>
+            <img class="mySlide" src="Library image.jpg" style="width:100%; height:300px;">
+             <img class="mySlide" src="Library image-1.jpg" style="width:100%; height:300px;">
+              <img class="mySlide" src="Library image-2.jpg" style="width:100%; height:300px;">
+               <img class="mySlide" src="Library image-3.jpg" style="width:100%; height:300px;">
+                <img class="mySlide" src="Library image-4.jpg" style="width:100%; height:300px;">
+        </section>
+        
+       <section class="section section-dark">
+        <p>
+        Library Gallery
+        <br>
+        <br>
+A Glimpse Into Our Library
+<br>
+Take a look inside our library and explore the spaces, books, and moments that make it special. From peaceful reading corners to shelves filled with stories, our gallery captures the joy of reading and discovery.
+<br>
+<br>
+Our Collection
+<br>
+Explore photographs of our novels, manga, biographies, and other books available in our collection.
+<br>
+<br>
+Reading Corner
+<br>
+A quiet and comfortable space where readers can relax, explore new stories, and enjoy their favorite books.
+<br>
+<br>
+Our Bookshelves
+<br>
+Discover our carefully organized shelves, filled with stories, knowledge, and adventures waiting to be explored.
+<br>
+<br>
+Library Moments
+<br>
+A collection of memorable moments from reading sessions, book discussions, events, and activities at our library.
+</p>
+    </section>
+        
+        <script>
+            var myIndex = 0;
+            carousel();
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlide");
+                for(i=0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if(myIndex >x.length) {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel, 3000);
+            }
+        </script>
+
     </body>
 </html>

@@ -27,6 +27,15 @@
                 background-color: #ffe066;
                 color: black;
             }
+            .footer{
+                position:fixed;
+                left:0;
+                bottom:0;
+                width:100%;
+                background-color: #000;
+                color: #ddd;
+                text-align: center;
+            }
         </style>
     </head>
     <body>
@@ -36,5 +45,60 @@
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact_Us</a>
        </div> 
+       <section>
+            <img class="mySlide" src="Library image.jpg" style="width:100%; height:300px;">
+             <img class="mySlide" src="Library image-1.jpg" style="width:100%; height:300px;">
+              <img class="mySlide" src="Library image-2.jpg" style="width:100%; height:300px;">
+               <img class="mySlide" src="Library image-3.jpg" style="width:100%; height:300px;">
+                <img class="mySlide" src="Library image-4.jpg" style="width:100%; height:300px;">
+        </section>
+          <section class="section section-dark">
+      <h2>Noval Section</h2>
+      <p>Step into new worlds through stories filled with imagination, adventure, mystery, romance, and unforgettable characters. Our novel collection offers something for every reader, whether you enjoy thrilling adventures or heartwarming stories.</p>
+    </section>
+    <div class="pimg1">
+      <div class="ptext">
+        <span class="border trans">Image One Text</span>
+      </div>
+    </div>
+
+       <section class="section section-dark">
+      <h2>Manga Section</h2>
+      <p>Explore the exciting world of manga through captivating artwork and engaging storytelling. From action and fantasy to comedy and drama, discover stories that bring characters and adventures to life, one page at a time.</p>
+    </section>
+    <div class="pimg2">
+      <div class="ptext">
+        <span class="border trans">Image Two Text</span>
+      </div>
+    </div>
+
+       <section class="section section-dark">
+      <h2>Biography Section</h2>
+      <p>Discover the real-life stories of remarkable people from different fields and generations. Learn about their journeys, challenges, achievements, and the experiences that shaped their lives and inspired others.</p>
+    </section>
+    <div class="pimg3">
+      <div class="ptext">
+        <span class="border trans">Image Three Text</span>
+      </div>
+    </div>
+    <div class="footer">
+        <p>“A reader lives a thousand lives before he dies . . . The man who never reads lives only one,” by George R.R. Martin</p>
+
+    </div> 
+<script>
+     var myIndex = 0;
+            carousel();
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlide");
+                for(i=0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if(myIndex >x.length) {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel, 3000);
+            }
+</script>
     </body>
 </html>
